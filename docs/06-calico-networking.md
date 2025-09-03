@@ -11,3 +11,6 @@ Apply Calico CNI:
 Verify:
 
                           kubectl get pods -n kube-system
+
+Initially, since only the master is in the cluster, you’ll see Calico pods running only on the master node.
+Automatically, Calico schedules a pod on that worker node as CNI run as DaemonSet .
