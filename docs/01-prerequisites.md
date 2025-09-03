@@ -18,3 +18,28 @@
 - `ufw` firewall configured  
 - **Swap disabled** permanently  
 - `containerd` runtime with **systemd cgroup driver**  
+
+## Step 1: Enable SSH  
+**Run on: Master + Worker**
+
+
+        sudo apt update
+        sudo apt install openssh-server -y
+        sudo systemctl status ssh
+
+
+## Step 2: Configure Firewall for SSH
+
+**Run on: Master + Worker**
+
+             sudo ufw allow ssh
+             sudo ufw reload
+
+## Step 3: Disable Swap
+
+**Run on: Master + Worker**
+
+          sudo swapoff -a
+          sudo nano /etc/fstab   # comment out swap line
+
+
