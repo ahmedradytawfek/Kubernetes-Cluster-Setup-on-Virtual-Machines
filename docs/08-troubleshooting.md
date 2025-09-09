@@ -30,13 +30,14 @@ Then add this to your ~/.bashrc:
 
            source <(kubectl completion bash)
 
-Reload:
-
-          source ~/.bashrc
-
 
 Add the alias to your shell config file :
 
-          echo "alias k=kubectl" >> ~/.bashrc
-         source ~/.bashrc
+         echo "alias k=kubectl" >> ~/.bashrc
+         echo "source <(kubectl completion bash)" >> ~/.bashrc
+         echo "complete -F __start_kubectl k" >> ~/.bashrc
+         
+Reload:
+
+          source ~/.bashrc
          
