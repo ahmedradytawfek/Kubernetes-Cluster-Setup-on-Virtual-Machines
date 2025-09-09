@@ -17,3 +17,20 @@
 
           sudo systemctl restart containerd
        
+# Why kubectl tab completion doesn’t work , how can solve this ?
+**on: Master**
+
+First, install bash-completion (if not already installed):
+
+Ubuntu/Debian:
+
+           sudo apt-get install bash-completion -y
+
+Then add this to your ~/.bashrc:
+
+           source <(kubectl completion bash)
+
+Reload:
+
+          source ~/.bashrc
+           
