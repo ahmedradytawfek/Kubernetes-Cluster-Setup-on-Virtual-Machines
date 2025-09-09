@@ -33,4 +33,10 @@ Then add this to your ~/.bashrc:
 Reload:
 
           source ~/.bashrc
-           
+
+
+Add the alias to your shell config file :
+
+          echo "alias k=kubectl" >> ~/.bashrc
+         source ~/.bashrc
+         
